@@ -11,11 +11,11 @@ Bekijk de code voorbeelden. Download of clone deze repository naar je computer. 
 
 - Verwijder `<fish>` en `<bubble>` uit de html file
 - Vervang `let fish = document.getElementsByTagName("fish")[0]` in de javascript file door:
-```
+```ts
 let fish = document.createElement("fish")
 ```
 - Voeg de vis vervolgens toe aan de game
-```
+```ts
 let game = document.getElementsByTagName("game")[0]
 game.appendChild(fish)
 ```
@@ -26,7 +26,7 @@ game.appendChild(fish)
 ## Opdracht 2
 
 In deze regels code staan de coördinaten en de kleur van de vis: 
-```
+```ts
 fish.style.transform = "translate(200px, 100px)"
 fish.style.filter = "hue-rotate(200deg)"
 ```
@@ -49,7 +49,7 @@ fish.style.filter = "hue-rotate(200deg)"
 # Code voorbeelden week 1
 
 Semantische HTML elementen
-```
+```html
 <road>
     <car></car>
     <car></car>
@@ -57,7 +57,7 @@ Semantische HTML elementen
 ```
 
 CSS voor semantische elementen
-```
+```css
 car {
    display: block;
    position:absolute;
@@ -66,12 +66,12 @@ car {
 }
 ```
 Aanmaken elementen met javascript
-```
+```ts
 let c = document.createElement("car")
 document.body.appendChild(c)
 ```
 Positioneren  elementen met javascript
-```
+```ts
 c.style.transform = "translate(20px, 20px)"
 
 let posx = 100
@@ -79,11 +79,11 @@ let posy = 300
 c.style.transform = `translate(${posx}px, ${posy}px)`
 ```
 Random getal tussen 0 en afmeting window
-```
+```ts
 let randomPosition = Math.random() * window.innerWidth
 ```
 Een element klikbaar maken:
-```
+```ts
 element.addEventListener("click", clickMe)
 
 function clickMe(e){
